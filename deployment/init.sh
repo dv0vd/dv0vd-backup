@@ -20,5 +20,10 @@ cat /root/dv0vd.xyz/deployment/configs/fail2ban/fail2ban.local >> /etc/fail2ban/
 systemctl enable fail2ban &&
 systemctl start fail2ban &&
 
+# restart
+rm /etc/rc.local -f &&
+cp /root/dv0vd.xyz/deployment/configs/linux/rc.local /etc/rc.local
+chmod a+x /etc/rc.local &&
+
 reboot
 
