@@ -1,0 +1,11 @@
+[DEFAULT]
+findtime          = 1d
+maxretry          = 3
+bantime           = 1d
+bantime.increment = true
+banaction         = iptables-allports
+
+[sshd]
+enabled = true
+backend = systemd
+mode    = aggressive
