@@ -3,11 +3,11 @@ Backup server for dv0vd.xyz website.
 
 ## Getting started
 1) Update packages index: `apt update`.
-1) Install git: `apt install git`.
-1) Configure the `.env` file.
-1) Copy SSH private key to `../.ssh`.
-1) Setup `../.ssh/config` file.
-1) Copy Podman images to `./deployment/images`:
+2) Install git: `apt install git`.
+3) Configure the `.env` file.
+4) Copy SSH private key to `../.ssh`.
+5) Setup `../.ssh/config` file.
+6) Copy Podman images to `./deployment/images`:
 - coturn_4.7.0.tar
 - dv0vd-https-proxy_1.1.0.tar
 - dv0vd-socks4_1.1.3.tar
@@ -17,4 +17,4 @@ Backup server for dv0vd.xyz website.
 - node_24.5.0-alpine.tar
 - postgres_15.14-alpine.tar
 - synapse_1.135.0.tar
-1) Run the initialization script `./deployment/init.sh`.
+7) Run the initialization script `./deployment/init.sh`.
