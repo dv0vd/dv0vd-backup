@@ -3,7 +3,7 @@ timedatectl set-timezone UTC &&
 
 #apt
 apt update &&
-apt upgrade &&
+apt upgrade -y &&
 apt install -y make &&
 apt install -y git && 
 
