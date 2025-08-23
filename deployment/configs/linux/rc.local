@@ -1,5 +1,5 @@
 #!/bin/bash
 export PATH=$PATH:/root/.local/bin:/root/.local/bin
-cd /root/dv0vd.xyz
+cd /root/dv0vd.xyz-backup
 make on-startup
 exit 0
