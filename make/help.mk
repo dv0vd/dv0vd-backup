@@ -6,4 +6,4 @@ help:
 	@echo ${GREEN}logs-auth'                    '${WHITE}— get SSH connection attemps logs${RESET}
 	@echo ${GREEN}fail2ban-status'              '${WHITE}— get fail2ban jails status${RESET}
 	@echo ${GREEN}fail2ban-unban-all'           '${WHITE}— unban all IPs in fail2ban${RESET}
-	@echo ${GREEN}schedule-midnight-reboot'     '${WHITE}— reboot server at midnight${RESET}
+	@echo ${GREEN}on-startup'                   '${WHITE}— commands to execute immediately after server startup${RESET}

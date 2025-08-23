@@ -1,6 +1,5 @@
 #!/bin/bash
 export PATH=$PATH:/root/.local/bin:/root/.local/bin
-cd /root/dv0vd.xyz-backup
-make logs-clear
-make schedule-midnight-reboot
+cd /root/dv0vd.xyz
+make on-startup
 exit 0
