@@ -1,4 +1,4 @@
 on-startup:
-	- shutdown -r 0:00
+	- shutdown -r 23:00
 	- $(MAKE) logs-clear
 
