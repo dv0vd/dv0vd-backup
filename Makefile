@@ -8,3 +8,4 @@ include ./make/help.mk
 include ./make/logs.mk
 include ./make/hooks.mk
 include ./make/fail2ban.mk
+include ./make/common.mk

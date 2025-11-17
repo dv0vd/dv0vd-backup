@@ -7,7 +7,7 @@ configure_fail2ban() {
   log "Configuring fail2ban..."
   cp /root/dv0vd/deployment/configs/fail2ban/jail.local /etc/fail2ban/jail.local
   cp /root/dv0vd/deployment/configs/fail2ban/fail2ban.local /etc/fail2ban/fail2ban.local
-  systemctl enable fail2ban
+  systemctl disable fail2ban
   systemctl start fail2ban
   log "Fail2ban successfully configured"
 }
@@ -38,6 +38,7 @@ install_packages() {
   apt install -y make
   apt install -y git
   apt install -y fail2ban
+  apt install -y ipset # for iptables
   log "Packages successfully installed"
 }
 
@@ -69,8 +70,10 @@ set_timezone() {
 configure_dns() {
   log "Configuring DNS..."
   touch /etc/resolv.conf || true
-  echo $DNS1 >> /etc/resolv.conf
-  echo $DNS2 >> /etc/resolv.conf
+  echo "nameserver ${DNS1}" > /etc/resolv.conf
+	echo "nameserver ${DNS2}" >> /etc/resolv.conf
+	echo "nameserver 1.1.1.1" >> /etc/resolv.conf
+	echo "nameserver 8.8.8.8" >> /etc/resolv.conf
   log "DNS successfully configured"
 }
 
