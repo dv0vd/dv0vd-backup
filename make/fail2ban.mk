@@ -7,3 +7,6 @@ fail2ban-unban-all:
 
 fail2ban-start:
 	systemctl start fail2ban
+
+fail2ban-stop:
+	systemctl stop fail2ban
