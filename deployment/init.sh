@@ -38,6 +38,7 @@ install_packages() {
   apt install -y make
   apt install -y git
   apt install -y fail2ban
+  apt install -y iptables
   apt install -y ipset # for iptables
   log "Packages successfully installed"
 }
