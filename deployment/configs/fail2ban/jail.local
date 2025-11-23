@@ -1,7 +1,7 @@
 [DEFAULT]
 findtime          = 1d
 maxretry          = 3
-bantime           = 1d
+bantime           = -1
 bantime.increment = true
 banaction         = %(banaction_allports)s
 
