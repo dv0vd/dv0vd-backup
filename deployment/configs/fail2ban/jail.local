@@ -1,8 +1,9 @@
 [DEFAULT]
-findtime          = 1d
-maxretry          = 3
+findtime          = 10m
+maxretry          = 30
 bantime           = -1
 bantime.increment = true
+bantime.factor    = 2
 banaction         = %(banaction_allports)s
 
 [sshd]
