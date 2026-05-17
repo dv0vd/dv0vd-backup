@@ -15,3 +15,6 @@ fail2ban-start:
 
 fail2ban-stop:
 	systemctl stop fail2ban
+
+fail2ban-restart: 
+	systemctl restart fail2ban
