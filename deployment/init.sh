@@ -5,7 +5,7 @@ set -e # stop script on any error
 
 configure_ssh() {
   log "Configuring SSH..."
-  cat /root/dv0vd/deployment/configs/ssh/ssh.pub >> /root/.ssh/authorized_keys
+  cat /root/dv0vd-backup/deployment/configs/ssh/ssh.pub >> /root/.ssh/authorized_keys
   touch /etc/ssh/sshd_config.d/00-dv0vd.conf
   echo 'PasswordAuthentication no' >> /etc/ssh/sshd_config.d/00-dv0vd.conf
   echo Port $SSH_PORT >> /etc/ssh/sshd_config.d/00-dv0vd.conf
@@ -15,7 +15,7 @@ configure_ssh() {
 finish() {
   log "Configuring rc.local autostart..."
   rm /etc/rc.local -f
-  cp /root/dv0vd/deployment/configs/linux/rc.local /etc/rc.local
+  cp /root/dv0vd-backup/deployment/configs/linux/rc.local /etc/rc.local
   chmod a+x /etc/rc.local
   log "rc.local autostart successfully configured"
   log "Initialization finished. Rebooting now..."

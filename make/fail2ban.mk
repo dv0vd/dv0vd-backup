@@ -1,7 +1,7 @@
 fail2ban-configure:
 	bash -c "set -a; . .env; set +a; envsubst < ./deployment/configs/fail2ban/jail_env.local > ./deployment/configs/fail2ban/jail.local"
-	cp /root/dv0vd/deployment/configs/fail2ban/jail.local /etc/fail2ban/jail.local
-	cp /root/dv0vd/deployment/configs/fail2ban/fail2ban.local /etc/fail2ban/fail2ban.local
+	cp /root/dv0vd-backup/deployment/configs/fail2ban/jail.local /etc/fail2ban/jail.local
+	cp /root/dv0vd-backup/deployment/configs/fail2ban/fail2ban.local /etc/fail2ban/fail2ban.local
 
 fail2ban-status:
 	fail2ban-client status
