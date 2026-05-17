@@ -3,6 +3,7 @@ findtime          = 10m
 maxretry          = 5
 bantime           = -1
 banaction         = %(banaction_allports)s
+ignoreip          = $FAIL2BAN_IGNORE_IPS
 
 [sshd]
 enabled = true

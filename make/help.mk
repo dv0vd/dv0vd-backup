@@ -6,6 +6,7 @@ help:
 	@echo ${GREEN}logs-auth'                    '${WHITE}— get SSH connection attemps logs${RESET}
 	@echo ${GREEN}logs-init'                    '${WHITE}— get init logs${RESET}
 	@echo ${GREEN}logs-startup'                 '${WHITE}— get startup logs${RESET}
+	@echo ${GREEN}fail2ban-configure'           '${WHITE}— configure fail2ban${RESET}
 	@echo ${GREEN}fail2ban-status'              '${WHITE}— get fail2ban jails status${RESET}
 	@echo ${GREEN}fail2ban-unban-all'           '${WHITE}— unban all IPs in fail2ban${RESET}
 	@echo ${GREEN}fail2ban-start'               '${WHITE}— start fail2ban${RESET}

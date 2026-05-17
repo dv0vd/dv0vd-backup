@@ -3,15 +3,6 @@ set -e # stop script on any error
 
 
 
-configure_fail2ban() {
-  log "Configuring fail2ban..."
-  cp /root/dv0vd/deployment/configs/fail2ban/jail.local /etc/fail2ban/jail.local
-  cp /root/dv0vd/deployment/configs/fail2ban/fail2ban.local /etc/fail2ban/fail2ban.local
-  systemctl disable fail2ban
-  systemctl start fail2ban
-  log "Fail2ban successfully configured"
-}
-
 configure_ssh() {
   log "Configuring SSH..."
   cat /root/dv0vd/deployment/configs/ssh/ssh.pub >> /root/.ssh/authorized_keys
@@ -85,5 +76,4 @@ set_timezone
 install_packages
 configure_dns
 configure_ssh
-configure_fail2ban
 finish

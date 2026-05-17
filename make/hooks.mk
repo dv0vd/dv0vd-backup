@@ -4,6 +4,7 @@ on-startup:
 	- ip addr add 9.9.9.9/32 dev lo || true
 	- $(MAKE) iptables-apply-rules
 	- shutdown -r 23:00
+	- $(MAKE) fail2ban-configure
 	- $(MAKE) fail2ban-start
 	- echo "nameserver ${DNS1}" > /etc/resolv.conf
 	- echo "nameserver ${DNS2}" >> /etc/resolv.conf
