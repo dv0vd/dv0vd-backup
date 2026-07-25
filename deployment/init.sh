@@ -5,7 +5,7 @@ set -e # stop script on any error
 
 configure_ssh() {
   log "Configuring SSH..."
-  cat /root/dv0vd-backup/deployment/configs/ssh/ssh.pub >> /root/.ssh/authorized_keys
+  echo "$SSH_PUBLIC_KEY" >> /root/.ssh/authorized_keys
   touch /etc/ssh/sshd_config.d/00-dv0vd.conf
   echo 'PasswordAuthentication no' >> /etc/ssh/sshd_config.d/00-dv0vd.conf
   echo Port $SSH_PORT >> /etc/ssh/sshd_config.d/00-dv0vd.conf
